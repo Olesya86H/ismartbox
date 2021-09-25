@@ -9,23 +9,31 @@
 /* Begin PBXBuildFile section */
 		508D980E26FF7FC60062C899 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508D980D26FF7FC60062C899 /* AppDelegate.swift */; };
 		508D981026FF7FC60062C899 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508D980F26FF7FC60062C899 /* SceneDelegate.swift */; };
-		508D981226FF7FC60062C899 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508D981126FF7FC60062C899 /* ViewController.swift */; };
 		508D981526FF7FC60062C899 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 508D981326FF7FC60062C899 /* Main.storyboard */; };
 		508D981826FF7FC60062C899 /* ismartbox.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 508D981626FF7FC60062C899 /* ismartbox.xcdatamodeld */; };
 		508D981A26FF7FEB0062C899 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 508D981926FF7FEB0062C899 /* Assets.xcassets */; };
 		508D981D26FF7FEB0062C899 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 508D981B26FF7FEB0062C899 /* LaunchScreen.storyboard */; };
+		508D982526FF89180062C899 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508D982426FF89180062C899 /* SplashViewController.swift */; };
+		508D982726FF9BD00062C899 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508D982626FF9BD00062C899 /* LoginViewController.swift */; };
+		508D982926FF9EF80062C899 /* ISmartBoxLoginDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508D982826FF9EF80062C899 /* ISmartBoxLoginDelegate.swift */; };
+		508D982B26FFB5F80062C899 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508D982A26FFB5F80062C899 /* User.swift */; };
+		508D982D26FFB64D0062C899 /* ismartboxClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508D982C26FFB64D0062C899 /* ismartboxClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		508D980A26FF7FC60062C899 /* ismartbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ismartbox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		508D980D26FF7FC60062C899 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		508D980F26FF7FC60062C899 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		508D981126FF7FC60062C899 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		508D981426FF7FC60062C899 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		508D981726FF7FC60062C899 /* ismartbox.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ismartbox.xcdatamodel; sourceTree = "<group>"; };
 		508D981926FF7FEB0062C899 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		508D981C26FF7FEB0062C899 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		508D981E26FF7FEB0062C899 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		508D982426FF89180062C899 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		508D982626FF9BD00062C899 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		508D982826FF9EF80062C899 /* ISmartBoxLoginDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISmartBoxLoginDelegate.swift; sourceTree = "<group>"; };
+		508D982A26FFB5F80062C899 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		508D982C26FFB64D0062C899 /* ismartboxClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ismartboxClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,12 +68,16 @@
 			children = (
 				508D980D26FF7FC60062C899 /* AppDelegate.swift */,
 				508D980F26FF7FC60062C899 /* SceneDelegate.swift */,
-				508D981126FF7FC60062C899 /* ViewController.swift */,
 				508D981326FF7FC60062C899 /* Main.storyboard */,
+				508D982626FF9BD00062C899 /* LoginViewController.swift */,
 				508D981926FF7FEB0062C899 /* Assets.xcassets */,
 				508D981B26FF7FEB0062C899 /* LaunchScreen.storyboard */,
 				508D981E26FF7FEB0062C899 /* Info.plist */,
 				508D981626FF7FC60062C899 /* ismartbox.xcdatamodeld */,
+				508D982426FF89180062C899 /* SplashViewController.swift */,
+				508D982826FF9EF80062C899 /* ISmartBoxLoginDelegate.swift */,
+				508D982A26FFB5F80062C899 /* User.swift */,
+				508D982C26FFB64D0062C899 /* ismartboxClient.swift */,
 			);
 			path = ismartbox;
 			sourceTree = "<group>";
@@ -140,10 +152,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				508D981226FF7FC60062C899 /* ViewController.swift in Sources */,
+				508D982D26FFB64D0062C899 /* ismartboxClient.swift in Sources */,
+				508D982926FF9EF80062C899 /* ISmartBoxLoginDelegate.swift in Sources */,
 				508D980E26FF7FC60062C899 /* AppDelegate.swift in Sources */,
 				508D981026FF7FC60062C899 /* SceneDelegate.swift in Sources */,
 				508D981826FF7FC60062C899 /* ismartbox.xcdatamodeld in Sources */,
+				508D982726FF9BD00062C899 /* LoginViewController.swift in Sources */,
+				508D982526FF89180062C899 /* SplashViewController.swift in Sources */,
+				508D982B26FFB5F80062C899 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
