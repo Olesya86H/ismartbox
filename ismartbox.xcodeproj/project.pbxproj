@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,7 @@
 		508D982926FF9EF80062C899 /* ISmartBoxLoginDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508D982826FF9EF80062C899 /* ISmartBoxLoginDelegate.swift */; };
 		508D982B26FFB5F80062C899 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508D982A26FFB5F80062C899 /* User.swift */; };
 		508D982D26FFB64D0062C899 /* ismartboxClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508D982C26FFB64D0062C899 /* ismartboxClient.swift */; };
+		50D991732700EAD1004F621B /* OAuth2 in Frameworks */ = {isa = PBXBuildFile; productRef = 50D991722700EAD1004F621B /* OAuth2 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50D991732700EAD1004F621B /* OAuth2 in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +100,9 @@
 			dependencies = (
 			);
 			name = ismartbox;
+			packageProductDependencies = (
+				50D991722700EAD1004F621B /* OAuth2 */,
+			);
 			productName = ismartbox;
 			productReference = 508D980A26FF7FC60062C899 /* ismartbox.app */;
 			productType = "com.apple.product-type.application";
@@ -125,6 +130,9 @@
 				Base,
 			);
 			mainGroup = 508D980126FF7FC40062C899;
+			packageReferences = (
+				50D991712700EAD1004F621B /* XCRemoteSwiftPackageReference "OAuth2" */,
+			);
 			productRefGroup = 508D980B26FF7FC60062C899 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -361,6 +369,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		50D991712700EAD1004F621B /* XCRemoteSwiftPackageReference "OAuth2" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/p2/OAuth2.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.3.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		50D991722700EAD1004F621B /* OAuth2 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 50D991712700EAD1004F621B /* XCRemoteSwiftPackageReference "OAuth2" */;
+			productName = OAuth2;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		508D981626FF7FC60062C899 /* ismartbox.xcdatamodeld */ = {
