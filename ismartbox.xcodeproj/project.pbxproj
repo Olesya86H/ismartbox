@@ -15,10 +15,8 @@
 		508D981D26FF7FEB0062C899 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 508D981B26FF7FEB0062C899 /* LaunchScreen.storyboard */; };
 		508D982526FF89180062C899 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508D982426FF89180062C899 /* SplashViewController.swift */; };
 		508D982726FF9BD00062C899 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508D982626FF9BD00062C899 /* LoginViewController.swift */; };
-		508D982926FF9EF80062C899 /* ISmartBoxLoginDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508D982826FF9EF80062C899 /* ISmartBoxLoginDelegate.swift */; };
-		508D982B26FFB5F80062C899 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508D982A26FFB5F80062C899 /* User.swift */; };
-		508D982D26FFB64D0062C899 /* ismartboxClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508D982C26FFB64D0062C899 /* ismartboxClient.swift */; };
 		50D991732700EAD1004F621B /* OAuth2 in Frameworks */ = {isa = PBXBuildFile; productRef = 50D991722700EAD1004F621B /* OAuth2 */; };
+		A7E4D7BFF4C454EB7C8A0C38 /* Pods_ismartbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3644FAC4AE38CE62AEBC3F8 /* Pods_ismartbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,9 +30,9 @@
 		508D981E26FF7FEB0062C899 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		508D982426FF89180062C899 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		508D982626FF9BD00062C899 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		508D982826FF9EF80062C899 /* ISmartBoxLoginDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISmartBoxLoginDelegate.swift; sourceTree = "<group>"; };
-		508D982A26FFB5F80062C899 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		508D982C26FFB64D0062C899 /* ismartboxClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ismartboxClient.swift; sourceTree = "<group>"; };
+		65F8EC583E63587AD550CEA3 /* Pods-ismartbox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ismartbox.release.xcconfig"; path = "Target Support Files/Pods-ismartbox/Pods-ismartbox.release.xcconfig"; sourceTree = "<group>"; };
+		84B0C3F8976E6E620442B5B0 /* Pods-ismartbox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ismartbox.debug.xcconfig"; path = "Target Support Files/Pods-ismartbox/Pods-ismartbox.debug.xcconfig"; sourceTree = "<group>"; };
+		F3644FAC4AE38CE62AEBC3F8 /* Pods_ismartbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ismartbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +41,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				50D991732700EAD1004F621B /* OAuth2 in Frameworks */,
+				A7E4D7BFF4C454EB7C8A0C38 /* Pods_ismartbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4EE4A27FBA9E2AE519DA9AE7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				84B0C3F8976E6E620442B5B0 /* Pods-ismartbox.debug.xcconfig */,
+				65F8EC583E63587AD550CEA3 /* Pods-ismartbox.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		508D980126FF7FC40062C899 = {
 			isa = PBXGroup;
 			children = (
 				508D980C26FF7FC60062C899 /* ismartbox */,
 				508D980B26FF7FC60062C899 /* Products */,
+				4EE4A27FBA9E2AE519DA9AE7 /* Pods */,
+				D3778853FDD4563722D7A52D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,11 +87,16 @@
 				508D981E26FF7FEB0062C899 /* Info.plist */,
 				508D981626FF7FC60062C899 /* ismartbox.xcdatamodeld */,
 				508D982426FF89180062C899 /* SplashViewController.swift */,
-				508D982826FF9EF80062C899 /* ISmartBoxLoginDelegate.swift */,
-				508D982A26FFB5F80062C899 /* User.swift */,
-				508D982C26FFB64D0062C899 /* ismartboxClient.swift */,
 			);
 			path = ismartbox;
+			sourceTree = "<group>";
+		};
+		D3778853FDD4563722D7A52D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F3644FAC4AE38CE62AEBC3F8 /* Pods_ismartbox.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,9 +106,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 508D982126FF7FEB0062C899 /* Build configuration list for PBXNativeTarget "ismartbox" */;
 			buildPhases = (
+				7C8D132B5FFA193BADFFEB15 /* [CP] Check Pods Manifest.lock */,
 				508D980626FF7FC50062C899 /* Sources */,
 				508D980726FF7FC50062C899 /* Frameworks */,
 				508D980826FF7FC50062C899 /* Resources */,
+				45B608776D2030F22AAA212E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,19 +172,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		45B608776D2030F22AAA212E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ismartbox/Pods-ismartbox-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ismartbox/Pods-ismartbox-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ismartbox/Pods-ismartbox-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C8D132B5FFA193BADFFEB15 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ismartbox-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		508D980626FF7FC50062C899 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				508D982D26FFB64D0062C899 /* ismartboxClient.swift in Sources */,
-				508D982926FF9EF80062C899 /* ISmartBoxLoginDelegate.swift in Sources */,
 				508D980E26FF7FC60062C899 /* AppDelegate.swift in Sources */,
 				508D981026FF7FC60062C899 /* SceneDelegate.swift in Sources */,
 				508D981826FF7FC60062C899 /* ismartbox.xcdatamodeld in Sources */,
 				508D982726FF9BD00062C899 /* LoginViewController.swift in Sources */,
 				508D982526FF89180062C899 /* SplashViewController.swift in Sources */,
-				508D982B26FFB5F80062C899 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +367,7 @@
 		};
 		508D982226FF7FEB0062C899 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84B0C3F8976E6E620442B5B0 /* Pods-ismartbox.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -330,6 +387,7 @@
 		};
 		508D982326FF7FEB0062C899 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65F8EC583E63587AD550CEA3 /* Pods-ismartbox.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

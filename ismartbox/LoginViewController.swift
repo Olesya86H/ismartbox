@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import OAuth2
+import Foundation
 
 class LoginViewController: UIViewController {
     
@@ -14,47 +14,72 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var buttonCaontainerView: UIView!
     
+    @IBOutlet weak var pass_textfield: UITextField!
+    @IBOutlet weak var login_textfield: UITextField!
+    
+    @IBOutlet weak var errorLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        
     }
     @IBAction func onloginButton(){
-        
-        let oauth2 = OAuth2CodeGrant(settings: [
-            "client_id": "MRIfZRi0w4MM9CJSt6Zpb0FOgY5yp9ddVXBLJ3e2c",
-            "client_secret": "RiQWtqvG2i2Cac5WmyQE1gba5zuXjID4fwPYJUiuhk165pP3rugiY3LLS737nFlokdFteymgqtTM8wMcJWIR9FcLpMj8aQYh2Ta1VzwR4O7HN0NiPdL8Cp4HFLZTubXC",
-            "authorize_uri": "https://ismartbox.ru/api-docs/swagger/",
-            "token_uri": "https://ismartbox.ru/o/token/",   // code grant only
-            "redirect_uris": ["ismartbox://o/callback"],   // register your own "myapp" scheme in Info.plist
-            "scope": "user repo:status",
-            "secret_in_body": true,    // Github needs this
-            "keychain": false,         // if you DON'T want keychain integration
-        ] as OAuth2JSON)
-        
-       /*
-         let base = URL(string: "https://api.github.com")!
-         let url = base.appendingPathComponent("user")
+        let str1 = String("&username=") + String(login_textfield.text!)
+        let str2 = String("&password=") + String(pass_textfield.text!)
+        let headers = [
+          "user-agent": "vscode-restclient",
+          "authorization": "Basic UklmWlJpMHc0TU05Q0pTdDZacGIwRk9nWTV5cDlkZFZYQkxKM2UyYzpSaVFXdHF2RzJpMkNhYzVXbXlRRTFnYmE1enVYaklENGZ3UFlKVWl1aGsxNjVwUDNydWdpWTNMTFM3MzduRmxva2RGdGV5bWdxdFRNOHdNY0pXSVI5RmNMcE1qOGFRWWgyVGExVnp3UjRPN0hOME5pUGRMOENwNEhGTFpUdWJYQw==",
+          "content-type": "application/x-www-form-urlencoded"
+        ]
 
-         var req = oauth2.request(forURL: url)
-         req.setValue("application/vnd.github.v3+json", forHTTPHeaderField: "Accept")
+        let postData = NSMutableData(data: "grant_type=password".data(using: String.Encoding.utf8)!)
+        postData.append(str1.data(using: String.Encoding.utf8)!)
+        postData.append(str2.data(using: String.Encoding.utf8)!)
 
-         self.loader = OAuth2DataLoader(oauth2: oauth2)
-         loader.perform(request: req) { response in
-             do {
-                 let dict = try response.responseJSON()
-                 DispatchQueue.main.async {
-                     // you have received `dict` JSON data!
-                 }
-             }
-             catch let error {
-                 DispatchQueue.main.async {
-                     // an error occurred
-                 }
-             }
-         }
-         */
-      /*
-        GTMOAuth2ViewControllerTouch alloc] */
+       // postData.append("&username=0000000001".data(using: String.Encoding.utf8)!)
+      // postData.append("&password=testuser".data(using: String.Encoding.utf8)!)
+
+        let request = NSMutableURLRequest(url: NSURL(string: "https://ismartbox.ru/o/token/")! as URL,
+                                                cachePolicy: .useProtocolCachePolicy,
+                                            timeoutInterval: 10.0)
+        request.httpMethod = "POST"
+        request.allHTTPHeaderFields = headers
+        request.httpBody = postData as Data
+
+        let session = URLSession.shared
+        
+        let dataTask =  session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
+          if (error != nil) {
+            print(error)
+          } else {
+            let httpResponse = response as? HTTPURLResponse
+           print(httpResponse)
+              if httpResponse?.statusCode == 400
+              {
+                  DispatchQueue.global().async {
+                      DispatchQueue.main.sync {
+                        
+                  let alert = UIAlertController(title: "Ошибка", message: "Проверьте правильность введённых данных!", preferredStyle: UIAlertController.Style.alert)
+                  alert.addAction(UIAlertAction(title: "Закрыть", style: UIAlertAction.Style.default, handler: nil))
+                 self.present(alert, animated: true, completion: nil)
+                      }
+                  }
+              }
+              else
+              {
+              DispatchQueue.global().async {
+                  DispatchQueue.main.sync {
+                      let splashController = self.storyboard?.instantiateViewController(withIdentifier: "splashVC")
+                      self.navigationController?.pushViewController(splashController!, animated: true)
+                  }
+              }
+            }
+          }
+        })
+
+        dataTask.resume()
+        
     }
+    
 }

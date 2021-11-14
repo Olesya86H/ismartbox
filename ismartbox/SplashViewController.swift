@@ -7,8 +7,7 @@
 
 import UIKit
 
-class SplashViewController: UIViewController/*, ISmartBoxLoginDelegate*/ {
-   // let appDelegate = UIApplication.shared.delegate as! AppDelegate
+class SplashViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,22 +15,4 @@ class SplashViewController: UIViewController/*, ISmartBoxLoginDelegate*/ {
         // Do any additional setup after loading the view.
     }
     
-   /* override func viewDidAppear(animated: Bool){
-        super.viewDidAppear(animated)
-        
-        if(!appDelegate.splashDelay) {
-            delay(1.0, closure:{
-                self.continueLogin()
-            })
-        }
-    }
-    func goToLogin() {
-        self.performSegue(withIdentifier: "LoginDegue", sender: self)
-    }
-    
-    func continueLogin() {
-        appDelegate.splashDelay = false
-        self.goToLogin()
-        }
-    */
 }
